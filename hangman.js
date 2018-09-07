@@ -153,7 +153,7 @@ window.onload = function () {
             var geuss = (this.innerHTML);
             this.setAttribute("class", "active");
             this.onclick = null;
-            for (var i = 0; i < word.length; i++) {
+            for (var i = 0; i <= word.length; i++) {
                 if (word[i] === geuss) {
                     geusses[i].innerHTML = geuss;
                     counter += 1;
@@ -175,13 +175,14 @@ window.onload = function () {
     play = function () {
         categories = [
             ["Washington Redskins", "Carolina Panters", "Tom Brady", "Atlanta Falcons", "Dallas Cowboys", "Cam Newton", "Aaron Rodgers"],
+            //["Cam Newton"],
             ["Ready Player One", "dirty-harry", "gladiator", "finding-nemo", "jaws"],
             ["manchester", "milan", "madrid", "amsterdam", "prague"]
         ];
 
         chosenCategory = categories[Math.floor(Math.random() * categories.length)];
         word = chosenCategory[Math.floor(Math.random() * chosenCategory.length)];
-        word = word.replace(/\s/g, "-");
+        // word = word.replace(/\s/g, "-");
         console.log(word);
         buttons();
 
@@ -207,11 +208,13 @@ window.onload = function () {
             ["Northern city in the UK", "Home of AC and Inter", "Spanish capital", "Netherlands capital", "Czech Republic capital"]
         ];
 
-        var catagoryIndex =
-            categories.indexOf(chosenCategory);
+        var catagoryIndex = categories.indexOf(chosenCategory);
         var hintIndex = chosenCategory.indexOf(word);
-        showClue.innerHTML = "Clue: - " + hints
-        [catagoryIndex][hintIndex]
+        console.log('PINO LOG', catagoryIndex, hintIndex, hints, hints[catagoryIndex][hintIndex])
+        showClue.innerHTML = "Clue: - " + hints[catagoryIndex][hintIndex]
+        console.log(hintIndex)
+        console.log(catagoryIndex)
+        console.log(word);
     };
 
     // Reset
