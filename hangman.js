@@ -33,7 +33,7 @@ window.onload = function () {
     // Select Catagory
     var selectCat = function () {
         if (chosenCategory === categories[0]) {
-            catagoryName.innerHTML = "Sea Creatures";
+            catagoryName.innerHTML = "NFL Terminology";
         } else if (chosenCategory === categories[1]) {
             catagoryName.innerHTML = "The Chosen Category Is Films";
         } else if (chosenCategory === categories[2]) {
@@ -56,7 +56,7 @@ window.onload = function () {
             } else {
                 guess.innerHTML = "_";
             }
-            \
+
             geusses.push(guess);
             wordHolder.appendChild(correct);
             correct.appendChild(guess);
@@ -95,7 +95,7 @@ window.onload = function () {
     };
 
     head = function () {
-
+    
         myHangman = document.getElementById("myHangman");
         context = myHangman.getContext('2d');
         context.beginPath();
@@ -176,7 +176,8 @@ window.onload = function () {
     // Play
     play = function () {
         categories = [
-            ["Dragonfish", "Frilled Shark", "Blobfish", "Isopod", "Anglerfish"],
+            ["Redskins", "Panters", "Tom Brady", "Falcons", "Cowboys", "Cam Newton", "Rodgers"],
+            
             ["Ready Player One", "dirty-harry", "gladiator", "finding-nemo", "jaws"],
             ["manchester", "milan", "madrid", "amsterdam", "prague"]
         ];
@@ -204,7 +205,7 @@ window.onload = function () {
     hint.onclick = function () {
 
         hints = [
-            ["Capable of producing its own light", "Termed a living fossil", "Its body is a gelatinous mass", "Permanently constrained to creeping along north atlantic and artic circle", "Uses fleshy growth at top of head to attract prey"],
+            ["Based in Washington", "Based in North Carolina", "Number one quaterback in league", "Team mascot is a falcon", "Often call Americas team", "Carolina Panters quaterback", "Who is Packers Quaterback"],
             ["Science-Fiction Book", "1971 American action film", "Historical drama", "Anamated Fish", "Giant great white shark"],
             ["Northern city in the UK", "Home of AC and Inter", "Spanish capital", "Netherlands capital", "Czech Republic capital"]
         ];
