@@ -26,6 +26,7 @@ window.onload = function () {
             check();
             myButtons.appendChild(letters);
             letters.appendChild(list);
+            console.log(letters)
         }
     }
 
@@ -158,7 +159,7 @@ window.onload = function () {
             for (var i = 0; i <= word.length; i++) {
                 if (word[i] === geuss) {
                     geusses[i].innerHTML = geuss;
-                    counter += 1;
+                    counter -= 1;
                 }
             }
             var j = (word.indexOf(geuss));
@@ -176,9 +177,9 @@ window.onload = function () {
     // Play
     play = function () {
         categories = [
-            ["Redskins", "Panters", "Tom Brady", "Falcons", "Cowboys", "Cam Newton", "Rodgers"],
+            ["redskins", "panters", "tom brady", "falcons", "cowboys", "cam", "rodgers"],
             
-            ["Ready Player One", "dirty-harry", "gladiator", "finding-nemo", "jaws"],
+            ["ready Player One", "dirty-harry", "gladiator", "finding-nemo", "jaws"],
             ["manchester", "milan", "madrid", "amsterdam", "prague"]
         ];
 
