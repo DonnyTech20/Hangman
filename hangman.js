@@ -33,7 +33,7 @@ window.onload = function () {
     // Select Catagory
     var selectCat = function () {
         if (chosenCategory === categories[0]) {
-            catagoryName.innerHTML = "The Category is NFL Teams";
+            catagoryName.innerHTML = "Sea Creatures";
         } else if (chosenCategory === categories[1]) {
             catagoryName.innerHTML = "The Chosen Category Is Films";
         } else if (chosenCategory === categories[2]) {
@@ -56,7 +56,7 @@ window.onload = function () {
             } else {
                 guess.innerHTML = "_";
             }
-
+            \
             geusses.push(guess);
             wordHolder.appendChild(correct);
             correct.appendChild(guess);
@@ -86,16 +86,18 @@ window.onload = function () {
     // Hangman
     canvas = function () {
 
-        myStickman = document.getElementById("stickman");
-        context = myStickman.getContext('2d');
+
+        myHangman = document.getElementById("myHangman");
+        context = myHangman.getContext('2d');
         context.beginPath();
         context.strokeStyle = "#fff";
         context.lineWidth = 2;
     };
 
     head = function () {
-        myStickman = document.getElementById("stickman");
-        context = myStickman.getContext('2d');
+
+        myHangman = document.getElementById("myHangman");
+        context = myHangman.getContext('2d');
         context.beginPath();
         context.arc(60, 25, 10, 0, Math.PI * 2, true);
         context.stroke();
@@ -174,8 +176,7 @@ window.onload = function () {
     // Play
     play = function () {
         categories = [
-            ["Washington Redskins", "Carolina Panters", "Tom Brady", "Atlanta Falcons", "Dallas Cowboys", "Cam Newton", "Aaron Rodgers"],
-            //["Cam Newton"],
+            ["Dragonfish", "Frilled Shark", "Blobfish", "Isopod", "Anglerfish"],
             ["Ready Player One", "dirty-harry", "gladiator", "finding-nemo", "jaws"],
             ["manchester", "milan", "madrid", "amsterdam", "prague"]
         ];
@@ -203,7 +204,7 @@ window.onload = function () {
     hint.onclick = function () {
 
         hints = [
-            ["Based in Washington", "Based in North Carolina", "Number one quaterback in league", "Team mascot is a falcon", "Often call Americas team", "Carolina Panters quaterback", "Who is Packers Quaterback"],
+            ["Capable of producing its own light", "Termed a living fossil", "Its body is a gelatinous mass", "Permanently constrained to creeping along north atlantic and artic circle", "Uses fleshy growth at top of head to attract prey"],
             ["Science-Fiction Book", "1971 American action film", "Historical drama", "Anamated Fish", "Giant great white shark"],
             ["Northern city in the UK", "Home of AC and Inter", "Spanish capital", "Netherlands capital", "Czech Republic capital"]
         ];
